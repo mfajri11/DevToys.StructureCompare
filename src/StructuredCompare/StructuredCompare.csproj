@@ -10,11 +10,13 @@
     <!-- NuGet / DevToys Extension Metadata -->
     <IsPackable>true</IsPackable>
     <PackageId>DevToys.StructuredCompare</PackageId>
-    <Version>1.0.5</Version>
+    <Version>0.1.0</Version>
     <Title>Structured Compare</Title>
     <Authors>mfajri11</Authors>
     <Description>Compare YAML, JSON, and .env files in DevToys with Strict Order or Ignore Order semantic normalization.</Description>
     <PackageTags>devtoys-app;yaml;json;env;compare;diff</PackageTags>
+    <PackageProjectUrl>https://github.com/mfajri11/DevToys.StructureCompare</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mfajri11/DevToys.StructureCompare</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <NoWarn>$(NoWarn);NU5104</NoWarn>
   </PropertyGroup>
