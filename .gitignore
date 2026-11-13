@@ -1,0 +1,18 @@
+# .NET build & test outputs
+bin/
+obj/
+artifacts/
+TestResults/
+*.nupkg
+*.snupkg
+*.user
+*.suo
+
+# IDE & OS files
+.vs/
+.vscode/
+.idea/
+.DS_Store
+
+# Local agent/tooling files
+skills/

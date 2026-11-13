@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>DevToys.StructuredCompare</RootNamespace>
+    <AssemblyName>DevToys.StructuredCompare</AssemblyName>
+
+    <!-- NuGet / DevToys Extension Metadata -->
+    <IsPackable>true</IsPackable>
+    <PackageId>DevToys.StructuredCompare</PackageId>
+    <Version>1.0.5</Version>
+    <Title>Structured Compare</Title>
+    <Authors>mfajri11</Authors>
+    <Description>Compare YAML, JSON, and .env files in DevToys with Strict Order or Ignore Order semantic normalization.</Description>
+    <PackageTags>devtoys-app;yaml;json;env;compare;diff</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <NoWarn>$(NoWarn);NU5104</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevToys.Api" Version="2.0.10-preview" />
+    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.48" PrivateAssets="all" />
+    <PackageReference Include="YamlDotNet" Version="18.1.0" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

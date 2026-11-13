@@ -1,0 +1,22 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="ILRepacker" AfterTargets="Build">
+    <ItemGroup>
+      <InputAssemblies Include="$(OutputPath)$(TargetName)$(TargetExt)" />
+      <InputAssemblies Include="$(OutputPath)YamlDotNet.dll" Condition="Exists('$(OutputPath)YamlDotNet.dll')" />
+      <LibraryDirectories Include="@(ReferencePath->'%(RootDir)%(Directory)')" />
+      <LibraryDirectories Include="$(OutputPath)" />
+    </ItemGroup>
+
+    <ILRepack
+      Parallel="true"
+      DebugInfo="true"
+      Internalize="true"
+      AllowDuplicateResources="false"
+      InputAssemblies="@(InputAssemblies)"
+      LibraryPath="@(LibraryDirectories->Distinct())"
+      TargetKind="SameAsPrimaryAssembly"
+      OutputFile="$(OutputPath)$(TargetName)$(TargetExt)" />
+
+    <Delete Files="$(OutputPath)YamlDotNet.dll" Condition="Exists('$(OutputPath)YamlDotNet.dll')" />
+  </Target>
+</Project>
